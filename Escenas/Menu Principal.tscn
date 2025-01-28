@@ -1,0 +1,34 @@
+[gd_scene load_steps=2 format=3 uid="uid://36xdhxx0erv8"]
+
+[ext_resource type="Script" path="res://Codigos/Cambio_Escena.gd" id="1_5y68n"]
+
+[node name="Menu Principal" type="Node2D"]
+script = ExtResource("1_5y68n")
+
+[node name="Jugar" type="Button" parent="."]
+offset_left = 440.0
+offset_top = 63.0
+offset_right = 749.0
+offset_bottom = 160.0
+theme_override_font_sizes/font_size = 50
+text = "Jugar"
+
+[node name="Controles" type="Button" parent="."]
+offset_left = 440.0
+offset_top = 260.0
+offset_right = 749.0
+offset_bottom = 357.0
+theme_override_font_sizes/font_size = 50
+text = "Controles"
+
+[node name="Creditos" type="Button" parent="."]
+offset_left = 440.0
+offset_top = 454.0
+offset_right = 749.0
+offset_bottom = 551.0
+theme_override_font_sizes/font_size = 50
+text = "Creditos"
+
+[connection signal="pressed" from="Jugar" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="Controles" to="." method="_on_controles_pressed"]
+[connection signal="pressed" from="Creditos" to="." method="_on_creditos_pressed"]
