@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://csqscu3o60ai5"]
 
 [ext_resource type="Script" path="res://Codigos/Codi(Creditos).gd" id="1_ie02o"]
-[ext_resource type="Texture2D" uid="uid://b3p3c5gejgvmt" path="res://Imagenes y sonidos/Fondo.jpg" id="2_snadd"]
+[ext_resource type="Texture2D" uid="uid://b3p3c5gejgvmt" path="res://Imagenes y sonidos/Fondo/Fondo.jpg" id="2_snadd"]
 
 [node name="Escena3_Creditos" type="Node2D"]
 script = ExtResource("1_ie02o")

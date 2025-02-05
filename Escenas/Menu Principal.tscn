@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://36xdhxx0erv8"]
 
 [ext_resource type="Script" path="res://Codigos/Cambio_Escena.gd" id="1_5y68n"]
-[ext_resource type="Texture2D" uid="uid://b3p3c5gejgvmt" path="res://Imagenes y sonidos/Fondo.jpg" id="2_3nwfi"]
-[ext_resource type="AudioStream" uid="uid://b14fbs3t2lrvw" path="res://Imagenes y sonidos/Musica de fondo.mp3" id="3_qbb47"]
+[ext_resource type="Texture2D" uid="uid://b3p3c5gejgvmt" path="res://Imagenes y sonidos/Fondo/Fondo.jpg" id="2_4g6o0"]
+[ext_resource type="AudioStream" uid="uid://b14fbs3t2lrvw" path="res://Imagenes y sonidos/Fondo/Musica de fondo.mp3" id="3_vwcmr"]
 
 [node name="Menu Principal" type="Node2D"]
 script = ExtResource("1_5y68n")
@@ -10,7 +10,7 @@ script = ExtResource("1_5y68n")
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1920.0
 offset_bottom = 1080.0
-texture = ExtResource("2_3nwfi")
+texture = ExtResource("2_4g6o0")
 
 [node name="Jugar" type="Button" parent="."]
 offset_left = 440.0
@@ -37,7 +37,7 @@ theme_override_font_sizes/font_size = 50
 text = "Creditos"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_qbb47")
+stream = ExtResource("3_vwcmr")
 autoplay = true
 
 [connection signal="pressed" from="Jugar" to="." method="_on_jugar_pressed"]
