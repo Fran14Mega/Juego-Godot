@@ -1,0 +1,141 @@
+[gd_scene load_steps=20 format=3 uid="uid://bn6enqslbhlw7"]
+
+[ext_resource type="Script" path="res://Codigos/Codi(Juego).gd" id="1_dllao"]
+[ext_resource type="Texture2D" uid="uid://bcv0yr21uhrur" path="res://Imagenes/Fondo/Fondo Juego 2.png" id="2_n27gq"]
+[ext_resource type="Texture2D" uid="uid://bwbphek0sss00" path="res://Imagenes/Player/Daño.png" id="3_ffd1b"]
+[ext_resource type="Texture2D" uid="uid://ccedde7k2lyf6" path="res://Imagenes/Player/Idle.png" id="5_scsnv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7jugg"]
+atlas = ExtResource("3_ffd1b")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t7r2m"]
+atlas = ExtResource("3_ffd1b")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vxn31"]
+atlas = ExtResource("3_ffd1b")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ncuki"]
+atlas = ExtResource("3_ffd1b")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_re1o5"]
+atlas = ExtResource("5_scsnv")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xtk81"]
+atlas = ExtResource("5_scsnv")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wuhbr"]
+atlas = ExtResource("5_scsnv")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_miynu"]
+atlas = ExtResource("5_scsnv")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q0t6c"]
+atlas = ExtResource("5_scsnv")
+region = Rect2(384, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1n6io"]
+atlas = ExtResource("5_scsnv")
+region = Rect2(480, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f4api"]
+atlas = ExtResource("5_scsnv")
+region = Rect2(576, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2377s"]
+atlas = ExtResource("5_scsnv")
+region = Rect2(672, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yckrs"]
+atlas = ExtResource("5_scsnv")
+region = Rect2(768, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0aeay"]
+atlas = ExtResource("5_scsnv")
+region = Rect2(864, 0, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x1a37"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7jugg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t7r2m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vxn31")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ncuki")
+}],
+"loop": true,
+"name": &"Samurai_Daño",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_re1o5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xtk81")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wuhbr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_miynu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q0t6c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1n6io")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f4api")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2377s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yckrs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0aeay")
+}],
+"loop": true,
+"name": &"Samurai_Idle",
+"speed": 5.0
+}]
+
+[node name="Escena1_Juego" type="Node2D"]
+script = ExtResource("1_dllao")
+
+[node name="Fondo Juego 1" type="Sprite2D" parent="."]
+position = Vector2(579.5, 326)
+scale = Vector2(0.602604, 0.601852)
+texture = ExtResource("2_n27gq")
+
+[node name="Button" type="Button" parent="."]
+offset_right = 136.0
+offset_bottom = 77.0
+theme_override_font_sizes/font_size = 50
+text = "Atras"
+
+[node name="Animacion Samurai" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(608, 286)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_x1a37")
+animation = &"Samurai_Daño"
+frame_progress = 0.507285
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
