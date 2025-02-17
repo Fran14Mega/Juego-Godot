@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://gsx4rpib4et6"
+path="res://.godot/imported/Musica Derrota.mp3-3427d51b4f3afcc8239639b789355691.mp3str"
+
+[deps]
+
+source_file="res://Sonidos/Musica/Musica Derrota.mp3"
+dest_files=["res://.godot/imported/Musica Derrota.mp3-3427d51b4f3afcc8239639b789355691.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
